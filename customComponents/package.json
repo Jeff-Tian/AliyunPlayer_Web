@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./build_customize.sh",
-    "build_customize": "NODE_ENV=production webpack --config webpack.config.customize.js --progress"
+    "build_customize": "NODE_ENV=production webpack --config webpack.config.customize.js --progress",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,8 @@
     "copy-webpack-plugin": "^4.0.1",
     "current-device": "^0.7.8",
     "find-cache-dir": "^0.1.1",
-    "html-withimg-loader": "^0.1.16"
+    "html-withimg-loader": "^0.1.16",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.4",
@@ -59,5 +62,6 @@
   "bugs": {
     "url": "https://github.com/aliyunvideo/AliyunPlayer_Web/issues"
   },
-  "homepage": "https://github.com/aliyunvideo/AliyunPlayer_Web/custom-components#readme"
+  "homepage": "https://github.com/aliyunvideo/AliyunPlayer_Web/custom-components#readme",
+  "snyk": true
 }
